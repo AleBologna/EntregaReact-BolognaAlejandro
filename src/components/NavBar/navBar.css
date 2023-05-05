@@ -1,0 +1,31 @@
+.nav{
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+  }
+.logo{
+    width: 60px;
+}
+  .navList{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    list-style: none;
+  }
+
+  .navLinks a{
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+  }
+  .navLinks a:hover{
+    color: #429ad1;
+  }
+  .cartClass{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
