@@ -1,0 +1,17 @@
+.box-detail{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    margin: 20px;
+    padding: 30px;
+}
+.box-img{
+    height: 100%;
+}
+.img-detail{
+    height: 100%;
+}
+.color{
+    color: black;
+}

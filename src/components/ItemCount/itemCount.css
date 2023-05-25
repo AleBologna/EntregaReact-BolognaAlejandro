@@ -1,0 +1,43 @@
+.count-Center{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.count-Info{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.btn-Count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #000;
+    font-size: 20px;
+}
+.btn-Count:hover{
+    background-color: #1b1b1b;
+}
+.btn-Count:disabled{
+    background-color: #000!important;
+}
+.count-Number{
+    color: #000;
+}
+.btn-Cart{
+    width: 150px;
+    height: 25px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    margin: 10px;
+    cursor: pointer;  
+}
+.btn-Cart:hover{
+    background-color: #1b1b1b;
+}

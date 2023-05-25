@@ -1,4 +1,4 @@
-import "./navBar.css"
+import "./cartWidget.css"
 import 'boxicons'
 function CartWidget (){
 return (
