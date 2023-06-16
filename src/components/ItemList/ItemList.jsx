@@ -1,6 +1,11 @@
 import Flex from '../Flex/Flex';
 import Item from '../Item/Item'; 
-function ItemList({products}){
+import Loader from '../Loader/Loader';
+function ItemList({products, isLoading}){
+  if(isLoading)
+  return <Loader/>
+
+  if(products.length ===0) return <h1 style={{color:"black"}}>No se encontraron productos</h1>
   return (
     <>
     <Flex>

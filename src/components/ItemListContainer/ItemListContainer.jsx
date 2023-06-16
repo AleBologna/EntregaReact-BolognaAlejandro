@@ -14,6 +14,7 @@ function getData(){
     })
 }
 function ItemListContainer (){
+    let [isLoading, setIsLoading] = useState(true);
     const [products, setProducts] = useState([])
     const {categoryId} = useParams();
     
@@ -25,13 +26,16 @@ function ItemListContainer (){
         }else{
             setProducts(response);
         }
+        })
+        .finally(() => {
+            setIsLoading(false)
         });
     },[categoryId])
 
     return(
         <>
         {/* ItemList hace el map del array de products */}
-            <ItemList products={products}/>
+            <ItemList isLoading={isLoading} products={products}/>
         </>
     )
 }

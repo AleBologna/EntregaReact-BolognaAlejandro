@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import "./navBar.css"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function NavBar(){
+    
+let location = useLocation();
+useEffect(() =>{
+    window.scrollTo(0,0);
+}, [location])
+
     let [activeBtn,setActiveBtn] = useState(false);
     return(
         <nav className="nav">

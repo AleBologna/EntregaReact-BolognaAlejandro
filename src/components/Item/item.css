@@ -4,7 +4,7 @@
   align-items: center;
     background: #fefffe;
     width: 250px;
-    height: 490px;
+    height: 440px;
     margin: 30px;
     transition: all 0.5s ease;
 }
@@ -14,11 +14,12 @@
   }
   .card-Box{
     width: 100%;
-    height: 65%;
+    height: 70%;
+    border-bottom:1px solid #1b1b1b31!important;
   }
   .card-Image{
     width: 100%;
-    height: 100%;
+    
   }
   .card-Info{
     display: flex;
@@ -41,7 +42,6 @@
   color: #fff;
   background-color: #000;
   border: none;
-  margin-bottom: 10px;
   cursor: pointer;  
   transition: all 0.2s linear;
 }
@@ -51,5 +51,7 @@
 .card:hover .btn-Detail{
   opacity: 1;
 }
-
+.decoration{
+  text-decoration: none;
+}
 
