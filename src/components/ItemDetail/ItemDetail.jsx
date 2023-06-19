@@ -17,16 +17,17 @@ function ItemDetail({ product }) {
       <>
         <div className="box-detail">
           <div className="box-img">
-            <img className="img-detail" src={product.img} alt="" />
+            <img className="img-detail" src={product.img} alt="img" />
           </div>
-          <div>
-            <h1 className="color">{product.title}</h1>
-            <h1 className="color">Precio: ${product.price}</h1>
+          <div className="textDetail">
+            <h3 className="classCategory">{product.category}</h3>
+            <h1 className="classTitle">{product.title}</h1>
+            <h3 className="classPrice">Precio: ${product.price}</h3>
             {isInCart(product.id) ? (
-              <>
-              <Link to="/cart">Ir al carrito</Link>
-              <button onClick={() => removeItem(product.id)}>eliminar</button>
-              </>
+              <div className="containerBtn">
+              <Link to="/cart" className="btnLink">Ir al carrito</Link>
+              <a onClick={() => removeItem(product.id)} className="btnEliminar">Eliminar</a>
+              </div>
             ) : (
               <ItemCount onAddToCart={onAddToCart} stock={product.stock} />
             )}

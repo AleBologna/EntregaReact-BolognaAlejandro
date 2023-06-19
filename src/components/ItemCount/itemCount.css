@@ -8,36 +8,41 @@ align-items: center;
     gap: 20px;
     align-items: center;
     justify-content: center;
+    border: 1px solid #000;
 }
 .btn-Count{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #000;
     width: 25px;
     height: 25px;
     border: none;
     cursor: pointer;
-    background-color: #000;
+    background-color: #fff;
     font-size: 20px;
 }
 .btn-Count:hover{
-    background-color: #1b1b1b;
+    background-color: #e2e2e2;
 }
-.btn-Count:disabled{
-    background-color: #000!important;
-}
+
 .count-Number{
     color: #000;
 }
 .btn-Cart{
-    width: 150px;
-    height: 25px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 250px;
+    padding: 10px;
+    text-decoration: none;
     color: #fff;
     background-color: #000;
-    border: none;
-    margin: 10px;
-    cursor: pointer;  
+    transition: all 0.2s ease-in; 
 }
 .btn-Cart:hover{
-    background-color: #1b1b1b;
+    background-color: #212121;
 }
+
