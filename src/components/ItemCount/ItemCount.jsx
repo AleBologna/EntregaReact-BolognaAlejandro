@@ -1,4 +1,4 @@
-import "./ItemCount.css"
+import "./itemCount.css"
 import { useState } from "react";
 
 function ItemCount(props) {
