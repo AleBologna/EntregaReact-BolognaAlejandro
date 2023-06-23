@@ -39,8 +39,15 @@ export function CartContextProvider({children}){
     function removeItem(idRemove){
          setCart(cart.filter (el => el.id !== idRemove))
     }
+    function totalPrice(){
+        let total=0;
+        cart.forEach(el => {
+            total +=( el.count * el.price)
+        })
+        return total;
+    }
     return(
-        <cartContext.Provider value = { { cart, setCart, addItem, countItems, removeItem, clear, isInCart} }>
+        <cartContext.Provider value = { { cart, setCart, addItem, countItems, removeItem, clear, isInCart, totalPrice} }>
             {children}
         </cartContext.Provider>
     ) 

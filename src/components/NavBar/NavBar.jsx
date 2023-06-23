@@ -14,7 +14,7 @@ useEffect(() =>{
     return(
         <nav className="nav">
 
-        <Link to="/"><img src="../src/assets/images/logo.png" alt="LOGO" className="logo"/></Link>
+        <Link to="/"><img src="/assets/images/logo.png" alt="LOGO" className="logo"/></Link>
 
         <div onClick={() => setActiveBtn(!activeBtn)} className="burger">
             <div className={`span ${activeBtn ? 'span1' : ''}`}></div>
@@ -23,10 +23,10 @@ useEffect(() =>{
         </div>
 
         <ul className={`navList ${activeBtn ? '' : 'mobileMenu'}`}> 
-            <li className="navLinks"><Link to="/category/remera">Remeras</Link></li> 
-            <li className="navLinks"><Link to="/category/calzado">Calzados</Link></li> 
-            <li className="navLinks"><Link to="/category/pantalon">Pantalones</Link></li> 
-            <li className="navLinks"><Link to="/category/buzo">Buzos</Link></li> 
+            <li className="navLinks"><Link to="/category/Remeras">Remeras</Link></li> 
+            <li className="navLinks"><Link to="/category/Calzados">Calzados</Link></li> 
+            <li className="navLinks"><Link to="/category/Pantalones">Pantalones</Link></li> 
+            <li className="navLinks"><Link to="/category/Buzos">Buzos</Link></li> 
        </ul> 
 
        <CartWidget/>

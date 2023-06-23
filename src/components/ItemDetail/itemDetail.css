@@ -28,16 +28,18 @@
 }
 .classTitle{
     color: #000;
+    padding: 20px 0px;
     border-bottom: 1px solid #a2a2a2;
 }
 .classPrice{
     color: #000;
-    margin: 10px;
+    margin: 30px 0px;
 }
 .containerBtn{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .btnLink, .btnEliminar{
     cursor: pointer;

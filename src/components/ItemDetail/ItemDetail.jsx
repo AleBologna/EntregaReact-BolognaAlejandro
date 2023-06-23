@@ -9,8 +9,7 @@ function ItemDetail({ product }) {
 
   function onAddToCart(count) {
     addItem(product, count);
-    /*sweet alert*/
-    console.log(`Agregaste ${count} - ${product.title} al carrito`);
+    
   }
   if (product) {
     return (
