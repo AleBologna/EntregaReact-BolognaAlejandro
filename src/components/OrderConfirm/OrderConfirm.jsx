@@ -1,12 +1,13 @@
-import { useParams } from "react-router-dom"
+import { useParams } from 'react-router-dom';
 
 function OrderConfirm() {
+
+    const {orderid} = useParams();
   
-    const {orderid} = useParams()
-//HACER UN GETDOC Y TRAER LOS DETALLES DE LA COMPRA
     return (
     <div>
-      <h1 style={{color:"black"}}>tu orden de compra es {orderid}</h1>
+      <h1 style={{color:"#000",textAlign:"center", margin:"10px"}}>¡Muchas gracias por tu compra!</h1>
+      <h1 style={{color:"#000",textAlign:"center"}}>Tu orden de compra es {orderid}</h1>
     </div>
   )
 }

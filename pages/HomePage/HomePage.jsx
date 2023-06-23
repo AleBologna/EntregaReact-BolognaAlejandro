@@ -16,10 +16,11 @@ function HomePage() {
       <img src="/assets/images/imgPrincipalMedia.webp" className="imgMediaPrincipal" alt="" />
       </div>
       </>
-      :(
+      :
+      (
       (categoryId === "Remeras" || categoryId === "Calzados" || categoryId === "Pantalones" || categoryId === "Buzos")
       &&
-      <h1 style={{color:"#000"}}>{categoryId}</h1>)
+      <h1 className="titleHome">{categoryId}</h1>)
   } 
       <ItemListContainer />
     </>

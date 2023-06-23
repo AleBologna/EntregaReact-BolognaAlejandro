@@ -5,7 +5,7 @@
     background: #fefffe;
     width: 250px;
     height: 440px;
-    margin: 30px;
+    margin: 0px 30px 30px 30px;
     transition: all 0.5s ease;
 }
 .card:hover{
@@ -33,9 +33,11 @@
   }
   .card-Price{
     color: #000;
-    margin: 5px 0px 5px 0px;
+    margin: 5px 0px 0px 0px;
   }
 .btn-Detail{
+  margin-top: auto;
+  margin-bottom: 15px;
   opacity: 0;
   width: 150px;
   height: 25px;

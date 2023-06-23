@@ -9,9 +9,15 @@ overflow: hidden;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-bottom: 10px;
 }
 .containerImgMedia{
     display: none;
+}
+.titleHome{
+    color: #252525;
+    text-align: center;
+    margin: 10px;
 }
 
  @media (max-width: 768px){
@@ -24,6 +30,7 @@ overflow: hidden;
         background-size: cover;
         overflow: hidden;
         display: inline;
+        margin-bottom: 10px;
     }
     .imgMediaPrincipal{
         position: relative;

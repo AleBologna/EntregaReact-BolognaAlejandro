@@ -14,7 +14,9 @@ return(
             <strong><h3 className='card-Price'>${props.price}</h3></strong>
         </div>
    
-    
+        {
+            props.stock === 0 && <p style={{color:"#FF4A41", marginTop:"auto"}}>No hay stock</p>
+        }
         <button className='btn-Detail'>Ver detalle</button>
     
     </div>

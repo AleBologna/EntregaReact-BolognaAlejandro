@@ -61,7 +61,7 @@ const dataBase = [
         category:"Pantalones",
         img:"/assets/images/imgPantalon2.webp",
         price:32299,
-        stock:1,
+        stock:0,
     },
     {
         id:9,
@@ -101,7 +101,7 @@ const dataBase = [
         category:"Pantalones",
         img:"/assets/images/imgPantalon4.webp",
         price:31000,
-        stock:6
+        stock:0
     },
     {
         id:14,

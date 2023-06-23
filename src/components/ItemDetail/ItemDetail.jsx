@@ -6,12 +6,13 @@ import Loader from "../Loader/Loader";
 import { Link } from "react-router-dom";
 function ItemDetail({ product }) {
   const { addItem, removeItem, isInCart } = useContext(cartContext);
-
+  
   function onAddToCart(count) {
     addItem(product, count);
-    
   }
+
   if (product) {
+    if(product.img !== undefined){
     return (
       <>
         <div className="box-detail">
@@ -33,7 +34,14 @@ function ItemDetail({ product }) {
           </div>
         </div>
       </>
-    );
+    )}else{
+      return (
+      <div className="box2">    
+        <box-icon type='solid' name='shopping-bag' style={{height:"300px", width:"300px"}}></box-icon>
+        <p>No se encontró el producto</p>
+     </div>
+     )
+    }
   }
   return <Loader />;
 }

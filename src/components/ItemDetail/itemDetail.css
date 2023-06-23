@@ -1,10 +1,25 @@
+.box2{
+    width: 100%;
+    height: 100%;
+    padding: 50px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+}
+.box2 p{
+    font-size: 32px;
+    text-align: center;
+    color: #000;
+}
+
 .box-detail{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 80vh;
-    margin: 20px;
-    padding: 30px;
+    align-items: flex-start;
+    height: 100%;
+    margin: 10px;
+    padding: 0px;
 }
 .box-img{
     display: flex;
@@ -16,6 +31,7 @@
 }
 .img-detail{
     width: 70%;
+    margin: 5px;
 }
 .textDetail{
     height: 100%;
@@ -56,10 +72,11 @@
     background-color: #212121;
 }
 @media (max-width: 768px){
-    .box-img{
-        height: 200px;
-    }
-    .img-detail{
-        width:100%;
-    }
+.box-detail{
+flex-wrap: wrap;
+}
+
+.textDetail{
+    text-align: center;
+}
 }

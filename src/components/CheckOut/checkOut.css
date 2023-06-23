@@ -1,13 +1,20 @@
-.checkoutform-container{
-    background-color: #f70505;
-    width: 520px;  
+.checkoutTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.checkout-container{
+  background-color: #000;
+    width: 520px;
     border-radius: 1rem;
     text-align: center;
     margin: 30px auto 10px;
     padding: 20px;
   }
   
-  .checkoutform-container input{
+  .checkout-container input{
+    color: #000;
     background-color: white;
     border-radius: 1rem; 
     width: 85%;
@@ -19,5 +26,28 @@
     margin: 15px auto 20px; 
   }
   .btnEdit{
-    background-color: #61609b;
+    background-color: #fff;
+    color: #000;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .boxInput{
+    display: "flex";
+    margin-bottom: 24px;
+  }
+  .label{
+    width: 100px; 
+    margin-right: 4px;
+    color: #000;  
+
+  }
+
+  @media (max-width:768px){
+    .checkout-container{
+      width: 90%;
+    }
   }

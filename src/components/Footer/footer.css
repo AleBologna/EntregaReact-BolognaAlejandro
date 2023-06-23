@@ -1,0 +1,32 @@
+.footer{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px ;
+  border-top: 1px solid #615f5f51;
+  z-index: 5;
+}
+.containerLink{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  align-items: center;
+}
+.containerLink p{
+color: #000;
+font-size: 12px;
+margin-bottom: 10px;
+}
+.decorationLink{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.decorationLink li{
+  margin: 5px;
+  font-size: 32px;
+}
+
+

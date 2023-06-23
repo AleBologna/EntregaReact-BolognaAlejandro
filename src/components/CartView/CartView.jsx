@@ -2,12 +2,13 @@ import "./cartView.css"
 import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";
 import 'boxicons'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { createOrder } from "../../services/firebase";
 import CheckOut from "../CheckOut/CheckOut";
 
 
 function CartView() {
+  const style ={color:"white"};
   const {cart, removeItem, totalPrice, clear} = useContext(cartContext)
   const navigateTo = useNavigate()
   async function handleConfirm(userData){
@@ -17,22 +18,22 @@ function CartView() {
       date: new Date(),
       totalPrice: totalPrice(),
     } 
-    const id = await createOrder(order)
-    clear()
+    const id = await createOrder(order);
+    clear();
     navigateTo(`/order-confirmation/${id}`)
   }
   if(cart.length !== 0)  
   return (
     <div>
-      <h2 style={{color:"black"}}>CARRITO</h2>
+      <h2 className="titleCart">CARRITO</h2>
       <table className="cartTable">
       <thead className="cartTable_Head">
       <tr className="cartTable_Row">
-        <th style={{color:"black"}}>Titulo</th>
-        <th style={{color:"black"}}>Cantidad</th>
-        <th style={{color:"black"}}>Precio</th>
-        <th style={{color:"black"}}>Subtotal</th>
-        <th style={{color:"black"}}>Remover</th>
+        <th style={style}>Titulo</th>
+        <th style={style}>Cantidad</th>
+        <th style={style}>Precio</th>
+        <th style={style}>Subtotal</th>
+        <th style={style}>Remover</th>
       </tr>
       </thead>
       <tbody>
@@ -53,7 +54,6 @@ function CartView() {
         <h4>${totalPrice()}</h4>  
       </div>
       </div>
-      <Link to="/">Volver al inicio</Link>
       <CheckOut onConfirm={handleConfirm} />
       <br />
       <br />
@@ -61,7 +61,10 @@ function CartView() {
     </div>
   )
   return(
-    <h1 style={{color:"black"}}>TU CARRITO ESTÁ VACÍO</h1>
+    <div className="box3">    
+   <box-icon type='solid' name='basket' style={{height:"300px", width:"300px"}}></box-icon>
+   <p>¡Tu carrito está vacio!</p>
+</div>
   )
 }
 

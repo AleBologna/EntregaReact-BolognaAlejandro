@@ -1,7 +1,6 @@
-import { useContext, useState } from "react"
-import "./checkOut.css"
-import { cartContext } from "../../context/cartContext"
-
+import {useState } from "react";
+import "./checkOut.css";
+import 'boxicons';
 function CheckOut({onConfirm}) {
   const [userData, setUserData] = useState({
     nombre: "",
@@ -31,39 +30,39 @@ function CheckOut({onConfirm}) {
       email: "",
     });
   }
- 
-  const styleInput = { display: "flex", marginBottom: 24 };
-  const label = { width: "100px", marginRight: 4, color:"black" };
-
- const {cart} = useContext(cartContext);
-    
- if(cart.length !== 0) { 
     return (
     
 
-  <form className="checkout-container" onSubmit={onSubmit}>
-      <h1 style={{color:"black"}}>Ingresa tus datos para completar la compra 🛍</h1>
-      <div style={styleInput}>
-        <label style={label}>Nombre</label>
+  <form onSubmit={onSubmit}>
+    
+    <div className="checkoutTitle">
+      <h1 style={{color:"black"}}>Ingresa tus datos para completar la compra <box-icon type='solid' name='shopping-bags' style={{width:"35px", height:"30px"}}></box-icon></h1>
+    </div>
+    <div className="checkout-container">
+      <div className="boxInput">
+        <label className="label">Nombre</label>
         <input
+        required
           value={userData.nombre}
           name="nombre"
           type="text"
           onChange={onInputChange}
         />
       </div>
-      <div style={styleInput}>
-        <label style={label}>Teléfono</label>
+      <div className="boxInput">
+        <label className="label">Teléfono</label>
         <input
+        required
           value={userData.phone}
           name="phone"
           type="text"
           onChange={onInputChange}
         />
       </div>
-      <div style={styleInput}>
-        <label style={label}>Email</label>
+      <div className="boxInput">
+        <label className="label">Email</label>
         <input
+        required
           value={userData.email}
           name="email"
           type="text"
@@ -71,13 +70,10 @@ function CheckOut({onConfirm}) {
         />
       </div>
       <button className="btnEdit">Crear orden</button>
-      <button onClick={handleReset}>Vaciar</button>
+      <button className="btnEdit" onClick={handleReset}>Vaciar</button>
+      </div>
     </form>
-
-  )}else{
-  return(
-    <h1 style={{color:"Black"}}>Todavía no has hecho compras!</h1>
-  )}
+    )
 }
 
 export default CheckOut

@@ -26,7 +26,6 @@ export async function getData(){
 export async function getItemData(idUrl){
  const docRef = doc (db, "dataBase", idUrl);
  const docSnap = await getDoc (docRef);
- //FALTA EL ERROR
  return {id: docSnap.id, ...docSnap.data()}
 }
 export async function getCategoryData(idCategory){
